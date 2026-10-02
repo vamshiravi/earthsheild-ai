@@ -1,0 +1,18 @@
+{
+  "location": {
+    "latitude": "float",
+    "longitude": "float"
+  },
+  "time": "ISO-8601 date",
+  "satellite": {
+    "bands": ["B02", "B03", "B04", "B08", "B11", "B12"]
+  },
+  "environment": {
+    "rainfall": "float",
+    "soil_moisture": "float",
+    "elevation": "float"
+  },
+  "derived": {
+    "ndvi": "float"
+  }
+}

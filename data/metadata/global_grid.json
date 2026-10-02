@@ -1,0 +1,8 @@
+{
+  "scope": "global",
+  "latitude_min": -90,
+  "latitude_max": 90,
+  "longitude_min": -180,
+  "longitude_max": 180,
+  "grid_resolution_degrees": 1.0
+}
