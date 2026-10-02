@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 import { Map, Satellite, Activity, Brain } from "lucide-react";
 
 const navigation = [
@@ -8,6 +12,14 @@ const navigation = [
   { label: "AI Analysis", icon: Brain },
 ];
 export default function Home() {
+  const [status, setStatus] = useState("Checking...");
+
+useEffect(() => {
+  fetch("http://127.0.0.1:8000/api/health")
+    .then((res) => res.json())
+    .then((data) => setStatus(data.status))
+    .catch(() => setStatus("offline"));
+}, []);
   return (
     <main className="flex min-h-screen bg-background text-foreground">
       <aside className="w-64 border-r p-6">
@@ -41,7 +53,7 @@ export default function Home() {
     {[
       ["Active Anomalies", "—"],
       ["Risk Status", "—"],
-      ["Model Confidence", "—"],
+      ["Backend Status", status],
     ].map(([label, value]) => (
       <div key={label} className="rounded-lg border p-5">
         <p className="text-sm text-muted-foreground">{label}</p>
