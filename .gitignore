@@ -28,3 +28,16 @@ Thumbs.db
 
 # Data
 data/raw/
+# Generated processed data
+data/processed/
+
+# Large metadata artifacts
+data/metadata/sentinel2_global_*.json
+
+# Large model/data artifacts
+*.npy
+*.tif
+*.nc
+*.nc4
+*.h5
+*.pkl

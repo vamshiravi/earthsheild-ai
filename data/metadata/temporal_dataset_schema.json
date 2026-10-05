@@ -1,0 +1,37 @@
+{
+  "temporal_window": {
+    "start_date": "2025-09-01",
+    "end_date": "2025-09-30",
+    "frequency": "daily"
+  },
+  "spatial_grid": {
+    "cells": 64440,
+    "resolution_degrees": 1.0
+  },
+  "dynamic_features": [
+    "rainfall",
+    "soil_moisture",
+    "cloud_cover",
+    "satellite_available"
+  ],
+  "static_features": [
+    "elevation"
+  ],
+  "satellite_features": [
+    "B02",
+    "B03",
+    "B04",
+    "B08",
+    "B11",
+    "B12",
+    "NDVI"
+  ],
+  "missing_value_policy": {
+    "preserve_missing": true,
+    "use_availability_masks": true
+  },
+  "target": {
+    "primary": "flood_risk",
+    "forecast_horizon_days": 7
+  }
+}
